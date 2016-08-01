@@ -1,0 +1,30 @@
+@import "settings";
+@import "foundation";
+@import "ui-grid";
+@import "fonts";
+
+div.logoblock {
+  font-family: "Share Tech";
+  margin: 0.4em;
+  h1 {
+    font-family: "Share Tech";
+    font-size: 2.5em;
+    line-height: 1.0;
+    margin-left: -0.08em;
+    margin-bottom: -0.28em;
+  }
+  p {
+    letter-spacing: 0.19em;
+  }
+}
+
+.menu-bar.primary {
+  max-height: 2.5rem;
+  progress {
+    margin: 0.5rem 0;
+  }
+}
+
+.task-grid {
+  height: 100%;
+}

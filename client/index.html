@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" ng-app="application">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curator</title>
+    <link href="./assets/css/app.css" rel="stylesheet" type="text/css">
+    <script src="./assets/js/foundation.js"></script>
+    <script src="./assets/js/templates.js"></script>
+    <script src="./assets/js/routes.js"></script>
+    <script src="./assets/js/app.js"></script>
+  </head>
+  <body>
+  <div class="grid-frame">
+    <div class="grid-block vertical">
+      <div class="grid-block" style="height: 100%">
+        <div zf-panel position="left" id="sidebar" class="medium-grid-block medium-3 large-3 vertical">
+          <div class="grid-content collapse shrink hide-for-medium">
+            <a href="" class="secondary button expand" zf-close>Close</a>
+          </div>
+          <div class="grid-content shrink logoblock">
+            <h1>CURATOR</h1>
+            <p>web install kit</p>
+          </div>
+          <div class="grid-content">
+            <zf-accordion auto-open="true" multi-open="true">
+              <zf-accordion-item title="Status">
+                <p><a href="#!/">Detailed Progress</a></p>
+                <p><a href="#!/">Logs</a></p>
+              </zf-accordion-item>
+
+              <zf-accordion-item title="System Info">
+                <p><strong>Site:</strong> getcurator.org</p>
+                <p><strong>Framework:</strong> Backdrop 1.x</p>
+                <p><strong>File Access:</strong> FTP</p>
+              </zf-accordion-item>
+            </zf-accordion>
+          </div>
+
+        </div>
+
+        <div class="grid-block medium-9 large-9 vertical">
+          <ul class="grid-content menu-bar primary shrink hide-for-medium">
+            <li><a href="#!/" zf-open="sidebar">Menu</a></li>
+          </ul>
+          <div class="grid-content" ng-controller="TasksController">
+            <div ui-grid="gridOptions" ui-grid-tree-view class="grid task-grid"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-block noscroll menu-bar primary">
+        <div class="grid-container small-6 medium-6 large-6">
+          <progress value="65" max="100">65 %</progress>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </body>
+</html>
