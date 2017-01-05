@@ -1,0 +1,15 @@
+<div class="grid-block vertical" ng-controller="ConnectionSettingsController as ConnCtrl">
+    <div class="grid-content">
+        <form ng-submit="ConnCtrl.submit()">
+            <p class="text-center"><strong>Server is not connected</strong></p>
+            <p>We weren't able to establish a connection to your server. This may be due to connectivity problems or a server error.</p>
+            <zf-accordion auto-open="false">
+                <zf-accordion-item title="Advanced">
+                    <p>API Location: <input type="text" size="25" ng-model="ConnCtrl.api_url" /></p>
+                </zf-accordion-item>
+            </zf-accordion>
+
+            <input type="submit" class="button float-right" value="Retry Connection">
+        </form>
+    </div>
+</div>

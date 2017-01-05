@@ -42,6 +42,7 @@ var paths = {
     'bower_components/foundation-apps/js/vendor/**/*.js',
     'bower_components/foundation-apps/js/angular/**/*.js',
     'bower_components/angular-ui-grid/ui-grid.js',
+    'bower_components/angular-http-auth/dist/http-auth-interceptor.js',
     '!bower_components/foundation-apps/js/angular/app.js'
   ],
   // These files are for your app's JavaScript

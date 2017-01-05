@@ -1,0 +1,11 @@
+.accordion-item {
+  .accordion-title:before {
+    content: "▶ ";
+  }
+}
+
+.accordion-item.is-active {
+  .accordion-title:before {
+    content: "▼ ";
+  }
+}
