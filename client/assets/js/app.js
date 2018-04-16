@@ -31,14 +31,17 @@
     .config(['$httpProvider', function ($httpProvider){
       $httpProvider.interceptors.push('RequireJSONInterceptor');
     }])
-    .service('ApiLocator', ['$location', function($location) {
-      this.path = $location.path() + 'api/v1/';
+    .service('ApiLocator', ['$window', function($window) {
+      this.path = $window.location.pathname + 'api/v1/';
 
       this.getPath = function() {
         return this.path;
       }
 
       this.setPath = function(new_path) {
+        if (new_path.charAt(new_path.length-1) != '/') {
+          new_path += '/';
+        }
         this.path = new_path;
       }
 

@@ -1,0 +1,23 @@
+dist: trusty
+sudo: false
+language: node_js
+node_js:
+- '7'
+
+addons:
+  apt:
+    packages:
+      - ruby
+  sauce_connect:
+    username: mbaynton
+    access_key:
+      secure: "ekA1XhTI2iRWrD7lxUw/dePeVFt0SgDdNZWTDByxKwXWGWxQqgapuTg5ST3Knr/2featxFd9N7/Vkcj9L7E5C9HcQBX3jYmSQMUfO87+/Ckgmet83jYlNcFWNvXbF8d/JXprrHXtICR5bXs3F65d10SBc4RiNPJiCZmqX+0CgRbQFz0aiPISVSiVaW4qIpw+NBTFnBZ95EiizJyQjlGeHysVTkJ/4DFwOVBug/A15AxlcDNs5j9ODpsumZ9dujAF+dV9eR1sjXRHX9iAt1bElcCjauSbTxD4YYGHo151hPRF5Y4kTSxiLE+XoyPropmWTfYNykmS0vTRCzM0Ymtk9nFaa/59YygNXIqI44uKRoG5vRQa1WkXyUv8YtOJiX04ZQTliktO4Ufv/fBs/1PN78mdhTA4qZl6qYsXL+MyAm4t+IoilpC3zXZJvRSseSJsm4JjO8RqIbHOLAKCFMacXVoiJyOWjduuKBpiScjFKPz8VGvGqGAymQt35y/kJIbXSO6pet0yEnUiTVyhBLRewpmz8tw8V6kYyZpLYnaLLaHxuoRRycxwV+6i00CqdBUbxFRcf5/QFihTD915ddWdudM66I2Ucmkt0kGp1/+zSVDBj74476lEpZ2wLEhNM6/k2qR+UP/TfsW4VIxiA1R/voAF3oS+8Nf7cZoPbLFj/P4="
+
+before_install:
+- npm install -g foundation-cli bower gulp
+- gem install bundler
+
+install:
+- npm install
+- bower --allow-root install
+- foundation build

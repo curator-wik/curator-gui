@@ -20,6 +20,11 @@ which in turn is built on AngularJS. It should be runnable by:
 
 Then npm start. Your browser should launch and navigate to `localhost:8079`.
 
+### Running unit tests
+Unit tests are written with jasmine and run with the Karma test runner. To
+start Karma in watching mode, run `npm test`. The `karma.conf.js` currently 
+will attempt to launch Chrome for its JS execution engine, so you need Chrome.
+
 ### Pointing curator-gui at a Curator API endpoint
 The GUI assumes it is hosted out of a .phar file, and so it first looks for its 
 API endpoint at a URL relative to the one that it was served out of. When it is
