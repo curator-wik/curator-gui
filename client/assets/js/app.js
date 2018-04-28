@@ -105,14 +105,29 @@
       $scope.gridOptions = {
         showTreeExpandNoChildren: true,
         columnDefs: [
-          { name: 'task', width: '80%' },
+          { name: 'task', width: '80%', field: 'taskGroupName' },
           { name: 'progress', width: '20%'},
         ],
         minRowsToShow: 8,
         enableHorizontalScrollbar: uiGridConstants.scrollbars.NEVER,
       };
 
-      $scope.gridOptions.data = [
+      $scope.testData = [
+          {
+              'task': 'Update core to version 7.50', 'progress': '0%', 'tasks': [
+                  {'task': 'Apply patches', 'progress': '0%'},
+                  {'task': 'Delete old files', 'progress': '100%'},
+              ]
+          },
+          {
+              'taskGroupName': 'Update component "Rules"', 'progress': '0%', 'tasks': [
+                  {'task': 'Apply patches', 'progress': '0%'},
+                  {'task': 'Delete old files', 'progress': '100%'},
+              ]
+          },
+      ];
+
+      $scope.data2 = [
         {'task': 'Update core to version 7.50', 'progress': '82%', '$$treeLevel': 0},
         {'task': 'Apply patches', 'progress': '82%'},
         {'task': 'Delete old files', 'progress': '100%'},
@@ -120,6 +135,16 @@
         {'task': 'Apply patches', 'progress': '34%'},
         {'task': 'Install replacement files', 'progress': '-'},
       ];
+
+      /*$scope.gridOptions.data = [
+        {'task': 'Update core to version 7.50', 'progress': '82%', '$$treeLevel': 0},
+        {'task': 'Apply patches', 'progress': '82%'},
+        {'task': 'Delete old files', 'progress': '100%'},
+        {'task': 'Update component "Rules"', 'progress': '20%', '$$treeLevel': 0},
+        {'task': 'Apply patches', 'progress': '34%'},
+        {'task': 'Install replacement files', 'progress': '-'},
+      ];*/
+      $scope.gridOptions.data = $scope.testData;
     }])
     .run(run)
   ;
