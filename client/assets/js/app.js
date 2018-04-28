@@ -114,7 +114,7 @@
 
       $scope.testData = [
           {
-              'task': 'Update core to version 7.50', 'progress': '0%', 'tasks': [
+              'taskGroupName': 'Update core to version 7.50', 'progress': '0%', 'tasks': [
                   {'task': 'Apply patches', 'progress': '0%'},
                   {'task': 'Delete old files', 'progress': '100%'},
               ]
