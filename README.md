@@ -50,3 +50,8 @@ Once you have a Curator API server up for the gui to interact with, simply click
 MIT
 
 Copyright &copy; 2017 Mike Baynton
+
+### Big Thanks
+
+Cross-browser Testing Platform and Open Source <3 Provided by [Sauce Labs](https://saucelabs.com)
+
